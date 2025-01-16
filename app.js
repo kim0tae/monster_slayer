@@ -19,7 +19,14 @@ const app = Vue.createApp({
     heal() {},
     surrender() {},
   },
-  computed: {},
+  computed: {
+    monsterBarStyles() {
+      return { width: this.monsterHealth + '%' };
+    },
+    playerBarStyles() {
+      return { width: this.playerHealth + '%' };
+    },
+  },
 });
 
 app.mount('#game');
